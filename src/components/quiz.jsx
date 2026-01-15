@@ -22,7 +22,12 @@ function Quiz() {
         <div>
 
             <h2>Question 1</h2>
-            <p>{questionBank[0].question}</p>
+            <p className="question">{questionBank[0].question}</p>
+
+            <button className="option">Berlin</button>
+            <button className="option">Madrid</button>
+            <button className="option">Paris</button>
+            <button className="option">Rome</button>
         </div>
     );
 }
