@@ -24,10 +24,9 @@ function Quiz() {
             <h2>Question 1</h2>
             <p className="question">{questionBank[0].question}</p>
 
-            <button className="option">Berlin</button>
-            <button className="option">Madrid</button>
-            <button className="option">Paris</button>
-            <button className="option">Rome</button>
+            {questionBank[0].options.map((option) => 
+                <button className="option">{option}</button>
+            )}
         </div>
     );
 }
