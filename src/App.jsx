@@ -2,10 +2,7 @@ import './index.css'
 
 function App() {
 
-  return (
-    <>
-      Hello World!
-    </>
+  return ( <div className="app-container"> Hello World!</div>
   )
 }
 
