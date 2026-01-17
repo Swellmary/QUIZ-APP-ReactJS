@@ -16,7 +16,13 @@ function Quiz() {
             options: ["JavaScript XML", "Java Syntax Extension", "JavaScript Extension", "Java XML"],
             answer: "JavaScript XML"
         }, 
-    ]
+    ];
+
+    const [optionSelected, setOptionSelected] = useState("None");
+
+    function handleOptionClick(option){
+        setOptionSelected(option);
+    } 
 
     return (
         <div>
@@ -25,13 +31,16 @@ function Quiz() {
             <p className="question">{questionBank[0].question}</p>
 
             {questionBank[0].options.map((option) => 
-                <button className="option">{option}</button>
+                <button className="option" onClick={() => handleOptionClick(option)}> {option} </button>
             )}
 
             <div className="nav-buttons">
                 <button>Previous</button>
                 <button>Next</button>
             </div>
+
+            <p>Option Selected: {handleOptionClick}</p>
+
         </div>
     );
 }
