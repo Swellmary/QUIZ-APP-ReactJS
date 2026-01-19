@@ -52,12 +52,10 @@ function Quiz() {
     }
 
     function restartQuiz() {
-
-            if (isQuizFinished === false) {
-                return <Quiz />;
-            }
-            
-        }
+        setCurrentQuestion(0);
+        setUserAnswers(initialUserAnswers);
+        setIsQuizFinished(false);
+    }
 
     if (isQuizFinished) {
         return <Result userAnswers={userAnswers} questionBank={questionBank} restartQuiz={restartQuiz}/>;
