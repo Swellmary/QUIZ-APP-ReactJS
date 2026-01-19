@@ -51,8 +51,16 @@ function Quiz() {
         }
     }
 
+    function restartQuiz() {
+
+            if (isQuizFinished === false) {
+                return <Quiz />;
+            }
+            
+        }
+
     if (isQuizFinished) {
-        return <Result userAnswers={userAnswers} questionBank={questionBank}/>;
+        return <Result userAnswers={userAnswers} questionBank={questionBank} restartQuiz={restartQuiz}/>;
     }
 
     return (
