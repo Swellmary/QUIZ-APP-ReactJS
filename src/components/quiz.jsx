@@ -53,8 +53,8 @@ function Quiz() {
             )}
 
             <div className="nav-buttons">
-                <button onClick={goToPrev}>Previous</button>
-                <button onClick={goToNext}>Next</button>
+                <button onClick={goToPrev} disabled={currentQuestion <= 0}>Previous</button>
+                <button onClick={goToNext} disabled={currentQuestion >= 2}>Next</button>
             </div>
 
         </div>
