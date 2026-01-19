@@ -19,13 +19,13 @@ function Quiz() {
         }, 
     ];
 
-    // const initialAnswer = [null, null, null];
+    const initialUserAnswers = [null, null, null];
 
-    const [optionSelected, setOptionSelected] = useState("None");
+    const [userAnswers, setUserAnswers] = useState(initialUserAnswers);
 
-    function handleSelectOption(option){
-        setOptionSelected(option);
-    } 
+    const [currentQuestion, setCurrentQuestion] = useState(2);
+
+    function handleSelectOption(option){} 
 
     return (
         <div>
@@ -33,7 +33,7 @@ function Quiz() {
             <h2>Question 1</h2>
             <p className="question">{questionBank[0].question}</p>
 
-            {questionBank[0].options.map((option) => 
+            {questionBank[currentQuestion].options.map((option) => 
                 <button className="option" onClick={() => handleSelectOption(option)}> {option} </button>
             )}
 
@@ -41,8 +41,6 @@ function Quiz() {
                 <button>Previous</button>
                 <button>Next</button>
             </div>
-
-            <p>Option Selected: {optionSelected}</p>
 
         </div>
     );
