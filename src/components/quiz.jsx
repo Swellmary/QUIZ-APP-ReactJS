@@ -25,7 +25,12 @@ function Quiz() {
 
     const [currentQuestion, setCurrentQuestion] = useState(2);
 
-    function handleSelectOption(option){} 
+    function handleSelectOption(option){
+        const newUserAnswers = [...userAnswers];
+        newUserAnswers[currentQuestion] = option;
+        
+        setUserAnswers(newUserAnswers);
+    }
 
     return (
         <div>
